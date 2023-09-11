@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @refeico %>
+
+<div>
+  <%= link_to "Editar essa refeição", edit_refeico_path(@refeico) %> |
+  <%= link_to "Voltar para refeições", refeicos_path %>
+
+  <%= button_to "Deletar essa refeição", @refeico, method: :delete %>
+</div>

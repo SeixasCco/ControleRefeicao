@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Refeicões</h1>
+
+<div id="refeicos">
+  <% @refeicos.each do |refeico| %>
+    <%= render refeico %>
+    <p>
+      <%= link_to "Mostrar essa refeição", refeico %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nova refeição", new_refeico_path %>
