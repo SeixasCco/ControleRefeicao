@@ -1,4 +1,4 @@
-<div id="<%= dom_id refeico %>">
+<div class="text-box" id="<%= dom_id refeico %>">
   <p>
     <strong>Refeição:</strong>
     <%= refeico.refeicao %>
@@ -6,7 +6,10 @@
 
   <p>
     <strong>Data:</strong>
-    <%= refeico.data %>
+    <% if refeico.data.present? %>
+      <%= refeico.data.strftime("%d/%m/%Y") %>
+    <% else %>
+      N/A
+    <% end %>
   </p>
-
 </div>

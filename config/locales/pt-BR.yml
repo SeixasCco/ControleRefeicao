@@ -1,0 +1,13 @@
+# config/locales/pt-BR.yml
+
+pt-BR:
+  activerecord:
+    errors:
+      models:
+        refeicao:
+          attributes:
+            refeicao:
+              blank: "A refeição não pode ficar em branco"
+              invalid: "A refeição só permite letras"
+            data:
+              blank: "A data não pode ficar em branco"

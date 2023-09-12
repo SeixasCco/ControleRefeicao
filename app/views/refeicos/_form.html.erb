@@ -1,7 +1,7 @@
 <%= form_with(model: refeico) do |form| %>
   <% if refeico.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(refeico.errors.count, "error") %> prohibited this refeico from being saved:</h2>
+      <h2><%= pluralize(refeico.errors.count, "erros") %> não permitiram salvar essa refeição:</h2>
 
       <ul>
         <% refeico.errors.each do |error| %>
@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="text-box">
     <%= form.label :refeicao, style: "display: block" %>
-    <%= form.text_field :refeicao %>
+    <%= form.text_field :refeicao, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :data, style: "display: block" %>
-    <%= form.date_field :data %>
-  </div>
+  <div class="text-box">
+  <%= form.label :data, style: "display: block" %>
+  <%= form.date_field :data, class: "form-control", value: (form.object.data || Date.today).strftime("%d/%m/%Y") %>
+</div>
+
 
   <div>
-  <%= form.submit "Criar refeição" %>
+    <%= form.submit "Criar refeição", class: "btn btn-primary" %>
   </div>
 <% end %>

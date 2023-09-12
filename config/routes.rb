@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "home/about"
 
   get "home/FAQ"
+
+  get "home/Services"
 end
