@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "home/FAQ"
 
   get "home/Services"
+
+  get "home/Payment"
 end

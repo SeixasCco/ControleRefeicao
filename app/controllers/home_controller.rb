@@ -5,4 +5,6 @@ class HomeController < ApplicationController
   end
   def FAQ
   end
+  def Payment
+  end
 end
