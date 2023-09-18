@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get "home/Services"
 
   get "home/Payment"
+
+  get "home/Terms"
+
+  get "home/Privacy"
+
 end
