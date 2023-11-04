@@ -65,6 +65,6 @@ class RefeicosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def refeico_params
-      params.require(:refeico).permit(:refeicao, :data)
+      params.require(:refeico).permit(:refeicao, :data, :descricao, :calorias)
     end
 end

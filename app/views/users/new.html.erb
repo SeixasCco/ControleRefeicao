@@ -1,33 +1,44 @@
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-  <div id="error_explanation">
-              <div class="alert-error">
-                         O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
-              </div>
-              <ul>
-                         <% @user.errors.full_messages.each do |msg| %>
-                         <li><%= msg %></li>
-                         <% end %>
-              </ul>
+
+
+    <%= form_for @user , data: { turbo: false } do |f| %>
+      <% if @user.errors.any? %>
+      <div id="error_explanation" style="text-align: center;">
+                  <div class="alert-error" style="color: red;">
+                            O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
+                  </div>
+                  <ul style="list-style: none; padding: 0;">
+                            <% @user.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                            <% end %>
+                  </ul>
+      </div>
+    <% end %>
+    <div class="form-container-teste">
+      <div class="form-field">
+                  <%= f.label :Nome %>
+                  <%= f.text_field :name %>
+      </div>
+      <div class="form-field">
+                  <%= f.label :Email %>
+                  <%= f.email_field :email %>
+      </div>
+      <div class="form-field">
+                  <%= f.label :Senha %>
+                  <%= f.password_field :password %>
+      </div>
+      <div class="form-field">
+                  <%= f.label :Confirmação_De_Senha %>
+                  <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Cadastrar"%>
+      </div>
+
+
+
+    <% end %>
   </div>
-<% end %>
-  <div class="field">
-              <%= f.label :Nome %>
-              <%= f.text_field :name %>
-  </div>
-  <div class="field">
-              <%= f.label :Email %>
-              <%= f.email_field :email %>
-  </div>
-  <div class="field">
-              <%= f.label :Senha %>
-              <%= f.password_field :password %>
-  </div>
-  <div class="field">
-              <%= f.label :Confirmação_De_Senha %>
-              <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-              <%= f.submit "Cadastrar"%>
-  </div>
-<% end %>
+</div>
+
+
