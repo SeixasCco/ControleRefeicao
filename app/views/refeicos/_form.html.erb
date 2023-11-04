@@ -19,6 +19,12 @@
   <div class="text-box">
   <%= form.label :data, style: "display: block" %>
   <%= form.date_field :data, class: "form-control", value: (form.object.data || Date.today).strftime("%d/%m/%Y") %>
+
+  <%= form.label :descricao %>
+  <%= form.text_field :descricao, class: 'form-control' %>
+
+  <%= form.label :calorias %>
+  <%= form.number_field :calorias, class: 'form-control', min: 1 %>
 </div>
 
 
