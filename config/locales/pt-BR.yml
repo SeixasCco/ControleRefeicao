@@ -1,13 +1,17 @@
-# config/locales/pt-BR.yml
-
 pt-BR:
   activerecord:
     errors:
       models:
-        refeicao:
+        user:
           attributes:
-            refeicao:
-              blank: "A refeição não pode ficar em branco"
-              invalid: "A refeição só permite letras"
-            data:
-              blank: "A data não pode ficar em branco"
+            email:
+              taken: "já foi cadastrado"
+            password:
+              too_short: "é muito curto (o mínimo é %{count} caracteres)"
+            password_confirmation:
+              confirmation: "não é igual à senha"
+        # Any other model translations can go here
+      messages:
+        taken: "já está em uso"
+        too_short: "é muito curto (mínimo de %{count} caracteres)"
+        # Add other message translations as needed

@@ -3,18 +3,31 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
+    end
+  end
+
+
   def create
     @user = User.new(user_params)
     if @user.save
-      # When the user is successfully created, a :notice type flash message is set
-      redirect_to @user, notice: "Usuário foi criado com sucesso!"
+      redirect_to users_path, notice: "Usuário foi criado com sucesso!"
     else
-      # When the user is not created due to some validation errors, a :alert type flash message is set
       flash.now[:alert] = @user.errors.full_messages.to_sentence
       logger.debug @user.errors.full_messages.to_sentence
       render action: :new
     end
   end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+
 
   private
 
