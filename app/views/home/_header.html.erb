@@ -9,18 +9,24 @@
         <li class="nav-item">
           <%= link_to "Sobre", home_about_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Refeições", refeicos_path, class: "nav-link" %>
-        </li>
       </ul>
       <!-- Right-aligned links -->
       <ul class="navbar-nav ml-auto">
+        <!-- Always show Criar Conta link -->
         <li class="nav-item">
           <%= link_to "Criar conta", users_new_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Entrar", sign_in_path, class: "nav-link" %>
-        </li>
+        <!-- Check if user is logged in -->
+        <% if current_user %>
+          <li class="nav-item">
+           <%= link_to "Sair", sign_out_path, method: :get, class: "nav-link" %>
+          </li>
+
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Entrar", sign_in_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

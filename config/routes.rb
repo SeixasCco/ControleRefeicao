@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'users/new'
+
   resources :refeicos, :users
 
   root "home#index"
+
+  get 'sessions/new'
+
+  get 'users/new'
 
   get "home/about"
 
@@ -21,6 +24,10 @@ Rails.application.routes.draw do
 
   post   'sign_in'   => 'sessions#create'
 
-  delete 'sign_out'  => 'sessions#destroy'
+  get 'sign_out', to: 'sessions#destroy', as: :sign_out
+
+
+
+  get 'dashboard', to: 'dashboards#show'
 
 end

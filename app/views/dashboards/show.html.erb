@@ -1,0 +1,38 @@
+<!-- app/views/dashboards/show.html.erb -->
+<div class="dashboard">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+
+
+    <!-- Links to different sections -->
+    <div class="navbar-menu">
+      <a href="/bmi_calculator">Calculadora de IMC</a>
+      <a href="/appointments">Agendar Nutricionista</a>
+      <a href="/refeicos">Refeições</a>
+      <!-- ... other links ... -->
+    </div>
+
+    <!-- User profile icon -->
+    <div class="navbar-end">
+      <a href="/profile">Account</a>
+      <a href="/logout">Log Out</a>
+    </div>
+  </nav>
+
+  <!-- Main Area -->
+  <div class="main-area">
+    <!-- Welcome Message -->
+    <h1>Bem vindo, <%= current_user.name %>!</h1>
+    <!-- Summary Dashboard (Placeholders for now) -->
+    <div class="widgets">
+      <!-- Widgets will be placed here later -->
+      <div class="widget">Current BMI: Placeholder</div>
+      <div class="widget">Next Appointment: Placeholder</div>
+      <div class="widget">Latest Meal Logged: Placeholder</div>
+      <div class="widget">Water Intake: Placeholder</div>
+    </div>
+  </div>
+
+
+</div>
