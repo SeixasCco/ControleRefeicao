@@ -26,8 +26,10 @@ Rails.application.routes.draw do
 
   get 'sign_out', to: 'sessions#destroy', as: :sign_out
 
-
-
   get 'dashboard', to: 'dashboards#show'
+
+  get 'bmi_calculator', to: 'dashboards#bmi_calculator'
+
+  get 'calculate_bmi', to: 'dashboards#calculate_bmi'
 
 end

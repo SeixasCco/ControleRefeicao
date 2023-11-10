@@ -1,0 +1,17 @@
+<div class="bmi-calculator">
+  <h1>Calculadora de IMC</h1>
+  <%= form_with(id: "bmi-form", local: false) do |form| %>
+    <div class="field">
+      <%= label_tag :height, "Altura (em metros)" %>
+      <%= number_field_tag :height, nil, step: 0.01, required: true, id: "height-input" %>
+    </div>
+    <div class="field">
+      <%= label_tag :weight, "Peso (em quilogramas)" %>
+      <%= number_field_tag :weight, nil, step: 0.1, required: true, id: "weight-input" %>
+    </div>
+    <%= button_tag(type: 'button', id: 'calculate-bmi', class: 'button') do %>
+      Calcular IMC
+    <% end %>
+    <div id="bmi-result"></div>
+  <% end %>
+</div>
