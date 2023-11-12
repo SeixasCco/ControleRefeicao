@@ -20,13 +20,13 @@
     <div class="stats-grid">
       <div class="card water-intake">
         <h3>Ingestão de Água</h3>
-        <progress id="water-progress" value="3" max="8"></progress>
-        <p id="water-text">3 de 8 copos</p>
+        <progress id="water-progress" value="0" max="10"></progress>
+        <p id="water-text">0 de 10 copos</p>
       </div>
 
       <div class="card step-count">
         <h3>Contagem de passos</h3>
-        <p>4,500 passos</p>
+        <p id="step-count">0 passos</p>
       </div>
 
       <div class="card next-appointment">
@@ -36,9 +36,13 @@
     </div>
 
     <div class="action-buttons">
-      <button>Agendar Exercício</button>
       <%= button_tag 'Adicionar Copo', type: 'button', id: 'add-water', class: 'button-style', onclick: 'incrementWaterIntake()' %>
-      <button>Adicionar Passos</button>
+      <%= button_tag 'Adicionar Passos', type: 'button', id: 'add-steps', class: 'button-style', onclick: 'incrementStepCount()' %>
     </div>
 
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById('step-count').textContent = '0 passos';
+      });
+    </script>
 </div>
