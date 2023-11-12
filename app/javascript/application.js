@@ -10,3 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+function incrementWaterIntake() {
+  var progressBar = document.getElementById('water-progress');
+  var progressText = document.getElementById('water-text');
+
+  var currentValue = parseInt(progressBar.value);
+  currentValue = (currentValue >= 8) ? 0 : currentValue + 1;
+
+  progressBar.value = currentValue;
+  progressText.textContent = currentValue + " de " + progressBar.max + " copos";
+}

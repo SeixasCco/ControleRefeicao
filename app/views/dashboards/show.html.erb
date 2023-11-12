@@ -20,8 +20,8 @@
     <div class="stats-grid">
       <div class="card water-intake">
         <h3>Ingestão de Água</h3>
-        <progress value="3" max="8"></progress>
-        <p>3 de 8 copos</p>
+        <progress id="water-progress" value="3" max="8"></progress>
+        <p id="water-text">3 de 8 copos</p>
       </div>
 
       <div class="card step-count">
@@ -37,7 +37,7 @@
 
     <div class="action-buttons">
       <button>Agendar Exercício</button>
-      <button>Adicionar Copo</button>
+      <%= button_tag 'Adicionar Copo', type: 'button', id: 'add-water', class: 'button-style', onclick: 'incrementWaterIntake()' %>
       <button>Adicionar Passos</button>
     </div>
 
