@@ -14,7 +14,7 @@
   <div class="main-area">
   <div class="greeting-card">
   <% if user_signed_in? %>
-    <h2>Bem vindo, <%= current_user.name %>!</h2>
+    <h2>Bem vindo, <%= current_user.name.capitalize %>!</h2>
   <% else %>
     <h2>Bem vindo!</h2>
   <% end %>
@@ -44,6 +44,18 @@
           <p>Sem agendamentos</p>
         <% end %>
       </div>
+    </div>
+
+    <div class="card last-meal">
+      <h3>Última Refeição</h3>
+      <% if @last_meal %>
+        <p><strong>Nome:</strong> <%= @last_meal.refeicao %></p>
+        <p><strong>Data:</strong> <%= @last_meal.data.strftime("%d/%m/%Y") %></p>
+        <p><strong>Descrição:</strong> <%= @last_meal.descricao %></p>
+        <p><strong>Calorias:</strong> <%= @last_meal.calorias %></p>
+      <% else %>
+        <p>Sem última refeição</p>
+      <% end %>
     </div>
 
     <div class="action-buttons">

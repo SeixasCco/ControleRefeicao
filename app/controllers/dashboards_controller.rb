@@ -11,5 +11,6 @@ class DashboardsController < ApplicationController
 
   def show
     @next_appointment = Appointment.where('date >= ?', Date.today).order(:date, :hour).first
+    @last_meal = Refeico.last
   end
 end
