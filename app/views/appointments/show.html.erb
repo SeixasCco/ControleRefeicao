@@ -1,0 +1,21 @@
+<!-- app/views/appointments/show.html.erb -->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @appointment.date.strftime("%d-%m-%Y") %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @appointment.hour.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Nutricionista:</strong>
+  <%= @appointment.doctor %>
+</p>
+
+<%= link_to 'Editar', edit_appointment_path(@appointment) %> |
+<%= link_to 'Voltar Para Agendamento', appointments_path %>

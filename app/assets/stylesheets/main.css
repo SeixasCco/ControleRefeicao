@@ -3,6 +3,32 @@ body{
   line-height: 1.5;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Example color scheme */
+
+:root {
+  --primary-color: #5b88a4; /* Replace with your primary color */
+  --secondary-color: #f4f4f4; /* Replace with your secondary color */
+  --accent-color: #4d4a4a; /* Replace with your accent color */
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
 *{
   margin:0;
   padding:0;
@@ -143,22 +169,22 @@ p {
   display: flex; /* Use flexbox to arrange label and input */
   justify-content: space-between; /* Space between label and input */
   align-items: center; /* Align items vertically */
-  margin-bottom: 10px; /* Add some space between the fields */
+  margin-bottom: 10px;
 }
 
 .form-field label {
-  min-width: 100px; /* Or adjust as needed */
-  margin-right: 10px; /* Add some space between label and input */
+  min-width: 100px;
+  margin-right: 10px;
 }
 
 .form-field input, .form-field textarea, .form-field select {
-  flex: 1; /* Allows input to take up the remaining space */
-  margin-left: auto; /* Pushes the input to the right */
+  flex: 1;
+  margin-left: auto;
 }
 
 .actions {
-  text-align: center; /* Center the button */
-  margin-top: 20px; /* Add some space above the button */
+  text-align: center;
+  margin-top: 20px;
 }
 
 
@@ -184,7 +210,6 @@ p {
   width: 80%;
 }
 
-/* Add this to the bottom of your application.css file */
 
 .bmi-calculator {
   max-width: 600px;
@@ -209,7 +234,7 @@ p {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* Make sure the input does not exceed its parent's width */
+  box-sizing: border-box;
 }
 
 .bmi-calculator input[type="submit"] {
@@ -228,6 +253,45 @@ p {
 #bmi-result {
   margin-top: 20px;
   font-weight: bold;
+}
+
+
+.navbar {
+  background: var(--primary-color);
+  padding: 0 20px;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+
+.navbar-menu a:hover {
+  background: var(--accent-color);
+}
+
+.main-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.widget {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -256,5 +320,92 @@ p {
 .flash.notice {
   background-color: #e1f0c4;
   color: #2f6627;
+}
+
+button, input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* app/assets/stylesheets/application.css */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.field, .actions {
+  margin: 10px 0;
+}
+
+input[type="submit"] {
+  background-color: #428bca;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3071a9;
+}
+
+#error_explanation {
+  color: red;
+}
+
+.notice {
+  color: green;
+}
+
+/* Add this to your CSS file (e.g., app/assets/stylesheets/application.css) */
+.link-button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.link-button:hover {
+  background-color: #e8e8e8;
+  border-color: #b0b0b0;
+  text-decoration: none;
 }
 

@@ -1,0 +1,34 @@
+<!-- app/views/appointments/index.html.erb -->
+
+<p id="notice"><%= notice %></p>
+
+<h1>Agendamentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Nutricionista</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.date.strftime("%d-%m-%Y") %></td>
+        <td><%= appointment.hour.strftime("%H:%M") %></td>
+        <td><%= appointment.doctor %></td>
+        <td><%= link_to 'Mostrar', appointment, class: 'link-button' %></td>
+        <td><%= link_to 'Editar', edit_appointment_path(appointment), class: 'link-button' %></td>
+        <td><%= button_to 'Destruir', appointment, method: :delete, data: { confirm: 'Você tem certeza?' }, form: { class: 'inline' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Agendamento', new_appointment_path %>
+<%= link_to 'Voltar Para Dashboard', dashboard_path %>

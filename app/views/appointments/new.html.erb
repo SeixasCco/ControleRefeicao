@@ -1,0 +1,18 @@
+<%= form_with(model: @appointment, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :Data %>
+    <%= form.date_field :date %>
+  </div>
+  <div class="field">
+    <%= form.label :Hora %>
+    <%= form.time_field :hour %>
+  </div>
+  <div class="field">
+    <%= form.label :Nutricionista %>
+    <%= form.text_field :doctor %>
+  </div>
+  <div class="actions">
+  <%= form.submit (@appointment.new_record? ? 'Criar Agendamento' : 'Atualizar Agendamento') %>
+  </div>
+  <%= link_to 'Voltar', appointments_path %>
+<% end %>

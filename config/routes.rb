@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :refeicos, :users
+  resources :refeicos, :users, :appointments
 
   root "home#index"
 
@@ -31,5 +31,6 @@ Rails.application.routes.draw do
   get 'bmi_calculator', to: 'dashboards#bmi_calculator'
 
   get 'calculate_bmi', to: 'dashboards#calculate_bmi'
+
 
 end
