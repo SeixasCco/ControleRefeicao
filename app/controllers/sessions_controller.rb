@@ -5,9 +5,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      redirect_to dashboard_path
+      session[:user_id] = user.id
+      redirect_to dashboard_path, notice: 'Entrou na conta!'
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'email ou senha inválidos'
       render 'new', status: :unprocessable_entity
     end
   end
@@ -15,6 +16,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @current_user = nil
-    redirect_to root_url, notice: "Logged out!"
+    redirect_to root_url, notice: "Saiu da conta!"
   end
 end
