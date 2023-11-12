@@ -4,11 +4,12 @@ class DashboardsController < ApplicationController
   end
 
   def bmi_calculator
-    # This will display the form
   end
 
   def calculate_bmi
-    # You will implement the calculation here
-    # For now, it's a placeholder
+  end
+
+  def show
+    @next_appointment = Appointment.where('date >= ?', Date.today).order(:date, :hour).first
   end
 end

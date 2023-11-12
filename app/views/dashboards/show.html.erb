@@ -31,7 +31,14 @@
 
       <div class="card next-appointment">
         <h3>Próxima agenda</h3>
-        <p>Ter, Mar 18, 15:00 com Dr. João</p>
+        <% if @next_appointment %>
+          <p>
+            <%= l(@next_appointment.date, format: :long) %>,
+            <%= @next_appointment.hour.strftime("%H:%M") %> com Dr. <%= @next_appointment.doctor %>
+          </p>
+        <% else %>
+          <p>Sem agendamentos</p>
+        <% end %>
       </div>
     </div>
 
