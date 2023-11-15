@@ -108,7 +108,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Raul Zamban - raulalves4@gmail.com
 
-Project Link: https://github.com/SeixasCco/controle_refeicao
+Project Link: (https://github.com/SeixasCco/controlerefeicao)
 
 ## Acknowledgements
 
