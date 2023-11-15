@@ -46,7 +46,7 @@ Ensure you have the following installed on your local machine:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/SeixasCco/controle_refeicao.git
+git clone https://github.com/SeixasCco/ControleRefeicao.git
 cd controle_refeicao
 ```
 
@@ -108,7 +108,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Raul Zamban - raulalves4@gmail.com
 
-Project Link: (https://github.com/SeixasCco/controlerefeicao)
+Project Link: (https://github.com/SeixasCco/ControleRefeicao)
 
 ## Acknowledgements
 
