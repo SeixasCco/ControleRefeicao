@@ -2,7 +2,10 @@
 # Controle de Refeição App
 
 ## Introduction
-Controle de Refeição is a Ruby on Rails application designed for users to manage their meals, track water intake, count steps, and schedule appointments with nutritionists. This app helps maintain a healthy lifestyle by providing insights and easy management of health-related activities.
+Controle de Refeição is a Ruby on Rails application designed for users to manage their meals,
+track water intake, count steps, and schedule appointments with nutritionists.
+
+This app helps maintain a healthy lifestyle by providing insights and easy management of health-related activities.
 
 ## Features
 - User authentication system.
