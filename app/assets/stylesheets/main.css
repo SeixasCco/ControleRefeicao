@@ -4,12 +4,10 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
-/* Example color scheme */
-
 :root {
-  --primary-color: #5b88a4; /* Replace with your primary color */
-  --secondary-color: #f4f4f4; /* Replace with your secondary color */
-  --accent-color: #4d4a4a; /* Replace with your accent color */
+  --primary-color: #5b88a4;
+  --secondary-color: #f4f4f4;
+  --accent-color: #4d4a4a;
   --text-color: #333;
   --background-color: #f4f4f4;
 }
@@ -158,17 +156,17 @@ p {
 }
 
 .form-container-teste {
-  background-color: #f5f5f5; /* Or any color you prefer */
-  border: 1px solid #ddd; /* Or any style you prefer */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
   padding: 20px;
-  max-width: 500px; /* Or your desired width */
-  margin: auto; /* This centers the box in the parent */
+  max-width: 500px;
+  margin: auto;
 }
 
 .form-field {
-  display: flex; /* Use flexbox to arrange label and input */
-  justify-content: space-between; /* Space between label and input */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -354,8 +352,6 @@ input, select, textarea {
   border-radius: 5px;
 }
 
-/* app/assets/stylesheets/application.css */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -400,7 +396,6 @@ input[type="submit"]:hover {
   color: green;
 }
 
-/* Add this to your CSS file (e.g., app/assets/stylesheets/application.css) */
 .link-button {
   display: inline-block;
   padding: 10px 15px;

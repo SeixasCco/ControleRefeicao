@@ -1,25 +1,20 @@
 class RefeicosController < ApplicationController
   before_action :set_refeico, only: %i[ show edit update destroy ]
 
-  # GET /refeicos or /refeicos.json
   def index
     @refeicos = Refeico.all
   end
 
-  # GET /refeicos/1 or /refeicos/1.json
   def show
   end
 
-  # GET /refeicos/new
   def new
     @refeico = Refeico.new
   end
 
-  # GET /refeicos/1/edit
   def edit
   end
 
-  # POST /refeicos or /refeicos.json
   def create
     @refeico = Refeico.new(refeico_params)
 
@@ -34,7 +29,6 @@ class RefeicosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /refeicos/1 or /refeicos/1.json
   def update
     respond_to do |format|
       if @refeico.update(refeico_params)
@@ -47,7 +41,6 @@ class RefeicosController < ApplicationController
     end
   end
 
-  # DELETE /refeicos/1 or /refeicos/1.json
   def destroy
     @refeico.destroy
 
@@ -58,12 +51,10 @@ class RefeicosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_refeico
       @refeico = Refeico.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def refeico_params
       params.require(:refeico).permit(:refeicao, :data, :descricao, :calorias)
     end
