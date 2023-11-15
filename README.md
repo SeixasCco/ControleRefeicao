@@ -19,7 +19,7 @@ of health-related activities.
 - **Framework**: Ruby on Rails
 - **Database**: PostgreSQL
 - **Frontend**: HTML, CSS, JavaScript
-- **Runtime**: Ruby [insert ruby version]
+- **Runtime**: Ruby 3.2.2
 
 ## System Dependencies
 - Ruby: 3.2.2
